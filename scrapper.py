@@ -1,4 +1,5 @@
 import csv
+from matplotlib import pyplot as plt
 
 file1 = open("E:\\Python1\\DATA\\CSV\\table-1.csv", "r", newline='')
 reader = csv.reader(file1)
@@ -51,9 +52,12 @@ with open("E:\Python1\DATA\CSV\Overall_Centruies.csv", "w") as f:
 
     f.close()
 
-print(years)
-print(counts)
+plt.plot(years, counts)
+plt.xlabel("YEARS")
+plt.ylabel("NO. OF CENTURIES")
+plt.title("VIRAT's CENTURIES")
+plt.show()
+
 # print(header)
 # print(data[0])
 
-#check
