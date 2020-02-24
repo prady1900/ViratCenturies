@@ -1,7 +1,7 @@
 import csv
 from matplotlib import pyplot as plt
 
-file1 = open("E:\\Python1\\DATA\\CSV\\table-1.csv", "r", newline='')
+file1 = open("table-1.csv", "r", newline='')
 reader = csv.reader(file1)
 header = next(reader)  # first is header
 
@@ -12,7 +12,7 @@ for row in data:
     date = int(row[-3][-4:])
     dates_table1.append(date)
 
-file2 = open("E:\\Python1\\DATA\\CSV\\table-2.csv", "r", newline='')
+file2 = open("table-2.csv", "r", newline='')
 reader1 = csv.reader(file2)
 header1 = next(reader1)  # first is header
 
@@ -43,7 +43,7 @@ while total_centuries_tn < 100:
     years.append(str(prev_year))
 
 
-with open("E:\Python1\DATA\CSV\Overall_Centruies.csv", "w") as f:
+with open("Overall_Centruies.csv", "w") as f:
     writer = csv.writer(f)
     writer.writerow(["YEAR", "No. of Centuries"])
 
